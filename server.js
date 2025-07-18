@@ -16,8 +16,12 @@ const adminAuthRoutes = require('./routes/adminAuthRoutes');
 
 const app = express();
 
-// Middleware
-app.use(cors());
+// ✅ CORS FIX: Allow frontend from Vercel
+app.use(cors({
+  origin: "https://qroll-frontend.vercel.app", // 🔐 Your Vercel frontend domain
+  credentials: true
+}));
+
 app.use(express.json());
 
 // MongoDB connection
