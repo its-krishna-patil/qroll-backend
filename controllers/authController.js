@@ -40,4 +40,7 @@ exports.login = async (req, res) => {
     console.error("Login error:", err.message);
     res.status(500).json({ msg: 'Server error' });
   }
+
+console.log(`[LOGIN] ${email} logged in as ${user.role}`);
+
 };
