@@ -12,7 +12,6 @@ const authRoutes = require('./routes/authRoutes');
 const qrRoutes = require('./routes/qrRoutes');
 const attendanceRoutes = require('./routes/attendanceRoutes');
 const adminRoutes = require('./routes/adminRoutes');
-const adminAuthRoutes = require('./routes/adminAuthRoutes');
 
 const app = express();
 
@@ -43,7 +42,6 @@ app.use('/api', authRoutes);
 app.use('/api', qrRoutes);
 app.use('/api', attendanceRoutes);
 app.use('/api', adminRoutes);
-app.use('/api', adminAuthRoutes);
 
 // Start server
 const PORT = process.env.PORT || 5000;
